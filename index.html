@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Masak Sandwich Sederhana</title>
+    <!-- Hubungkan file CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="game-container">
+        <h1>🥪 Masak Sandwich Kilat!</h1>
+        
+        <!-- Info Panel (Skor & Waktu) -->
+        <div class="info-panel">
+            <div class="score-box">Skor: <span id="score">0</span></div>
+            <div class="timer-box">Waktu: <span id="timer">30</span>s</div>
+        </div>
+
+        <!-- Tantangan / Resep -->
+        <div class="recipe-box">
+            <p>Pesanan Pelanggan:</p>
+            <div id="target-recipe" class="recipe-items">
+                <!-- Akan diisi oleh JavaScript -->
+            </div>
+        </div>
+
+        <!-- Area Piring (Tempat Menyusun Bahan) -->
+        <div class="plate-area">
+            <h3>Piring Kamu:</h3>
+            <div id="player-plate" class="plate">
+                <span class="empty-text">Piring masih kosong...</span>
+            </div>
+        </div>
+
+        <!-- Tombol Aksi (Sajikan & Reset) -->
+        <div class="action-buttons">
+            <button id="btn-submit" class="btn primary" onclick="submitSandwich()">Sajikan!</button>
+            <button id="btn-reset" class="btn secondary" onclick="resetPlate()">Ulangi Piring</button>
+        </div>
+
+        <!-- Pilihan Bahan Makanan -->
+        <div class="ingredients-panel">
+            <h3>Pilih Bahan:</h3>
+            <div class="ingredient-buttons">
+                <button class="ingredient-btn" onclick="addIngredient('Roti Bawah', '🍞')">🍞 Roti Bawah</button>
+                <button class="ingredient-btn" onclick="addIngredient('Keju', '🧀')">🧀 Keju</button>
+                <button class="ingredient-btn" onclick="addIngredient('Tomat', '🍅')">🍅 Tomat</button>
+                <button class="ingredient-btn" onclick="addIngredient('Daging', '🥩')">🥩 Daging</button>
+                <button class="ingredient-btn" onclick="addIngredient('Selada', '🥬')">🥬 Selada</button>
+                <button class="ingredient-btn" onclick="addIngredient('Roti Atas', '🍞')">🍞 Roti Atas</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hubungkan file JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
